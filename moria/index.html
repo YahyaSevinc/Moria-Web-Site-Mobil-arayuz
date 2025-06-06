@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  
+  <link rel="stylesheet" href="style.css">
+  <title>Mobil Menü</title>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <a href="index.html"><img src="img/logo.png" alt="Logo"></a>
+    </div>
+    <button class="menu-toggle" id="menuBtn" onclick="toggleMenu()">☰</button>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="menu-top">
+      <img src="img/logo.png" alt="Logo" style="height: 64px;">
+      <button class="menu-toggle" id="closeBtn" onclick="toggleMenu()">✕</button>
+    </div>
+
+    <nav>
+      <a href="index.html">Anasayfa</a>
+      <a href="hakkimizda-mobil.html">Hakkımızda</a>
+      <a href="#">Portfolyomuz</a>
+      <a href="#">İletişim</a>
+    </nav>
+
+    <div class="footer">
+      <div class="contact">
+        <a href="index.html" style="color: black; text-decoration: none;"><span><i class="fa-solid fa-phone"></i> 0551 966 78 36</span></a><br>
+        <a href="index.html" style="color: black; text-decoration: none;"><span><i class="fa-solid fa-envelope"></i> iletisim@moriayazilim.com</span></a>
+      </div>
+      <div class="socials">
+        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <section class="hero" style="background-image: url('img/main.png');">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h1>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</h1>
+      <a href="#" class="button">Teklif Al! <i class="fas fa-arrow-right"></i></a>
+    </div>
+  </section>
+
+  
+
+  <div class="slider">
+    <div class="slide active">
+      <img src="img/hero.jpg" alt="Slider Görseli">
+      <div class="content">
+        <h2>Portfolyomuz</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce nisi risus, ultricies non egestas ut.</p>
+        <a href=""><button class="btn">Yönlendir <i class="fas fa-arrow-right"></i></button></a>
+      </div>
+    </div>
+    <div class="slide">
+      <img src="img/slide2.jpg" alt="Slider Görseli">
+      <div class="content">
+        <h2>Bize Ulaşın!</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce nisi risus, ultricies non egestas ut.</p>
+        <a href="#"><button class="btn">Yönlendir <i class="fas fa-arrow-right"></i></button></a>
+      </div>
+    </div>
+    <!-- Eğer başka slide eklenecekse aşağıya çoğaltabilirsin -->
+    <!-- <div class="slide"> ... </div> -->
+  </div>
+  <div class="navigation">
+    <button class="nav-btn" onclick="prevSlide()"><i class="fas fa-arrow-left"></i></button>
+    <button class="nav-btn" onclick="nextSlide()"><i class="fas fa-arrow-right"></i></button>
+  </div>
+
+  <section class="services-section" style="margin-top: 24px;">
+    <div class="service-overlay"></div>
+    <div class="services">
+      <div class="service-item active" data-bg="img/hizmet1.jpg">
+        <h1>01</h1>
+        <h2>Web Tasarım</h2>
+        <p>Profesyonel web tasarım hizmetlerimizle dijital dünyada öne çıkın.</p>
+      </div>
+      <hr class="full-width-line">
+      <div class="service-item" data-bg="img/hizmet2.jpg">
+        <h1>02</h1>
+        <h2>Logo Tasarım</h2>
+        <p>Markanızı yansıtan özgün logolar tasarlıyoruz.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="scroll-text-wrapper">
+    <h2 class="scroll-text" id="scrollText">Yahya Sevinç Salim Öztürk Meriç Ege Kızılsu</h2>
+  </div>
+
+  <div class="scroll-text-wrapper">
+    <h2 class="scroll-text" id="scrollText">Efe Mert Cabaoğlu Volkan Gümüş Tunahan Aktaş</h2>
+  </div>
+
+  <footer class="footer2">
+    <div class="footer-top">
+      <div class="footer-logo">
+        <img src="img/logo.png" alt="Moria Yazılım Logo" />
+        <span>Moria Yazılım</span>
+      </div>
+      <ul class="footer-nav">
+        <li><a href="index.html">Anasayfa</a></li>
+        <li><a href="hakkimizda-mobil.html">Hakkımızda</a></li>
+        <li><a href="#">Portfolyomuz</a></li>
+        <li><a href="#">İletişim</a></li>
+      </ul>
+    </div>
+  
+    <div class="footer-bottom">
+      <p>Sosyal Medyada Biz!</p>
+      <div class="footer-socials">
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+      <p class="copyright">© Copyright 2025 Moria Yazılım A.Ş.</p>
+    </div>
+  </footer>
+
+  <script>
+    const items = document.querySelectorAll('.service-item');
+    const overlay = document.querySelector('.service-overlay');
+  
+    function changeBg(el) {
+      const bg = el.getAttribute('data-bg');
+      overlay.style.backgroundImage = `url('${bg}')`;
+      items.forEach(i => i.classList.remove('active'));
+      el.classList.add('active');
+    }
+  
+    items.forEach(item => {
+      // Mobil tıklama
+      item.addEventListener('click', () => changeBg(item));
+  
+      // Masaüstü hover
+      item.addEventListener('mouseenter', () => {
+        if (window.innerWidth > 768) {
+          changeBg(item);
+        }
+      });
+    });
+  
+    // Sayfa yüklenince ilk aktif olanın arkaplanı gösterilsin
+    window.addEventListener('DOMContentLoaded', () => {
+      const active = document.querySelector('.service-item.active');
+      if (active) {
+        changeBg(active);
+      }
+    });
+  </script>
+  
+
+  <script>
+    let currentIndex = 0;
+    const slides = document.querySelectorAll('.slide');
+
+    function showSlide(index) {
+      slides.forEach(slide => slide.classList.remove('active'));
+      slides[index].classList.add('active');
+    }
+
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % slides.length;
+      showSlide(currentIndex);
+    }
+
+    function prevSlide() {
+      currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+      showSlide(currentIndex);
+    }
+  </script>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('mobileMenu');
+      const menuBtn = document.getElementById('menuBtn');
+      const closeBtn = document.getElementById('closeBtn');
+      
+      menu.classList.toggle('active');
+
+      if (menu.classList.contains('active')) {
+        menuBtn.style.display = 'none';
+        closeBtn.style.display = 'block';
+        document.body.style.overflow = 'hidden';
+      } else {
+        menuBtn.style.display = 'block';
+        closeBtn.style.display = 'none';
+        document.body.style.overflow = '';
+      }
+    }
+
+    let lastScrollTop = 0;
+    const header = document.querySelector("header");
+
+    window.addEventListener("scroll", function () {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+      if (document.getElementById("mobileMenu").classList.contains("active")) {
+        return;
+      }
+
+      if (scrollTop > lastScrollTop) {
+        header.style.top = "-100px";
+      } else {
+        header.style.top = "0";
+      }
+      lastScrollTop = scrollTop;
+    });
+  </script>
+
+</body>
+</html>

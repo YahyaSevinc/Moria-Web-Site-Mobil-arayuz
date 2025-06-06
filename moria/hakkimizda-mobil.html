@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <link rel="stylesheet" href="hakkimizdaStyle.css">
+    <title>Moria Yazılım | Hakkımızda</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="img/logo.png" alt="Logo"></a>
+        </div>
+        <button class="menu-toggle" id="menuBtn" onclick="toggleMenu()">☰</button>
+      </header>
+
+      <div class="mobile-menu" id="mobileMenu">
+        <div class="menu-top">
+          <img src="img/logo.png" alt="Logo" style="height: 64px;">
+          <button class="menu-toggle" id="closeBtn" onclick="toggleMenu()">✕</button>
+        </div>
+    
+        <nav>
+          <a href="index.html">Anasayfa</a>
+          <a href="hakkimizda-mobil.html">Hakkımızda</a>
+          <a href="#">Portfolyomuz</a>
+          <a href="#">İletişim</a>
+        </nav>
+    
+        <div class="footer">
+          <div class="contact">
+            <span><i class="fa-solid fa-phone"></i> 0551 966 78 36</span><br>
+            <span><i class="fa-solid fa-envelope"></i> iletisim@moriayazilim.com</span>
+          </div>
+          <div class="socials">
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="breadcrumb-container">
+        <img src="img/breadcrumb.jpg" alt="Doğa Görseli" class="breadcrumb-bg">
+        <div class="breadcrumb-content">
+          <p><a href="index.html">Anasayfa</a> / <span>Hakkımızda</span></p>
+          <h1>Hakkımızda</h1>
+        </div>
+      </div>
+
+      <section class="about-section">
+        <p class="about-text2">
+            Biz, teknolojiyi ve tasarımı bir araya getirerek dijital dünyada fark yaratmayı amaçlayan genç bir ekibiz.
+            Hedefimiz, kullanıcı dostu, modern ve işlevsel çözümler sunarak insanların hayatını kolaylaştırmaktır.
+          </p>
+        <img src="img/about-us.jpg" alt="Hakkımızda görseli" class="about-image" />
+        <h2 class="about-title">Hakkımızda</h2>
+        <p class="about-text">
+          Biz, teknolojiyi ve tasarımı bir araya getirerek dijital dünyada fark yaratmayı amaçlayan genç bir ekibiz.
+          Hedefimiz, kullanıcı dostu, modern ve işlevsel çözümler sunarak insanların hayatını kolaylaştırmak.
+          Sürekli gelişen dünyada öğrenmeye ve üretmeye tutkuyla bağlıyız. Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus vel eligendi vitae veniam consequatur molestiae, quaerat sint perspiciatis consequuntur nihil cumque harum culpa sit possimus ratione voluptatem quae aliquid quia? Harum tenetur ducimus iure reprehenderit.
+        </p>
+      </section>
+
+      <div class="container">
+        <div class="tabs">
+          <button id="vizyonBtn" class="tab active">Vizyonumuz</button>
+          <button id="misyonBtn" class="tab">Misyonumuz</button>
+        </div>
+        <div class="content" id="vizyonContent">
+          <p>
+            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+          </p>
+        </div>
+        <div class="content" id="misyonContent" style="display: none;">
+          <p>
+            This is the mission statement. It reflects the purpose and values of the organization. The mission guides everyday activities and decisions, making sure the company stays aligned with its goals. It is usually short, impactful, and focused on what the company does for its customers and community. Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat saepe obcaecati voluptate, eveniet quo dolores tempora magnam molestiae distinctio id fugiat nemo libero unde quos qui quaerat, neque facere sint consequatur, delectus sed quis? Veritatis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi placeat iusto velit ad temporibus! Veniam.
+          </p>
+        </div>
+      </div>
+      <script>
+        const vizyonBtn = document.getElementById("vizyonBtn");
+const misyonBtn = document.getElementById("misyonBtn");
+const vizyonContent = document.getElementById("vizyonContent");
+const misyonContent = document.getElementById("misyonContent");
+
+vizyonBtn.addEventListener("click", () => {
+  vizyonContent.style.display = "block";
+  misyonContent.style.display = "none";
+  vizyonBtn.classList.add("active");
+  misyonBtn.classList.remove("active");
+});
+
+misyonBtn.addEventListener("click", () => {
+  vizyonContent.style.display = "none";
+  misyonContent.style.display = "block";
+  misyonBtn.classList.add("active");
+  vizyonBtn.classList.remove("active");
+});
+
+      </script>
+
+      <footer class="footer2">
+        <div class="footer-top">
+          <div class="footer-logo">
+            <img src="img/logo.png" alt="Moria Yazılım Logo" />
+            <span>Moria Yazılım</span>
+          </div>
+          <ul class="footer-nav">
+            <li><a href="index.html">Anasayfa</a></li>
+            <li><a href="hakkimizda-mobil.html">Hakkımızda</a></li>
+            <li><a href="#">Portfolyomuz</a></li>
+            <li><a href="#">İletişim</a></li>
+          </ul>
+        </div>
+      
+        <div class="footer-bottom">
+          <p>Sosyal Medyada Biz!</p>
+          <div class="footer-socials">
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+          <p class="copyright">© Copyright 2025 Moria Yazılım A.Ş.</p>
+        </div>
+      </footer>
+
+      <script>
+    function toggleMenu() {
+      const menu = document.getElementById('mobileMenu');
+      const menuBtn = document.getElementById('menuBtn');
+      const closeBtn = document.getElementById('closeBtn');
+      
+      menu.classList.toggle('active');
+
+      if (menu.classList.contains('active')) {
+        menuBtn.style.display = 'none';
+        closeBtn.style.display = 'block';
+        document.body.style.overflow = 'hidden';
+      } else {
+        menuBtn.style.display = 'block';
+        closeBtn.style.display = 'none';
+        document.body.style.overflow = '';
+      }
+    }
+
+    let lastScrollTop = 0;
+    const header = document.querySelector("header");
+
+    window.addEventListener("scroll", function () {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+      if (document.getElementById("mobileMenu").classList.contains("active")) {
+        return;
+      }
+
+      if (scrollTop > lastScrollTop) {
+        header.style.top = "-100px";
+      } else {
+        header.style.top = "0";
+      }
+      lastScrollTop = scrollTop;
+    });
+  </script>
+
+</body>
+</html>
